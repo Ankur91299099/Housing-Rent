@@ -1,0 +1,24 @@
+.ng-invalid.ng-touched
+{
+    border-color: red;
+}
+.photo-control
+{
+    min-height: 300px;
+    vertical-align: middle;
+    text-align:center;
+    margin:px;
+    border: 1px dashed hsl(180, 25%, 25%);;
+}
+
+.btn-group > label[ng-reflect-btn-radio]
+{
+    border-radius: 44px;
+    padding: 0 15px;
+    line-height: 30px;
+}
+
+.error-block
+{
+    color:red;
+}

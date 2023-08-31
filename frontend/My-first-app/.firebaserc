@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "ankur-renting"
+  },
+  "targets": {
+    "ankur-renting": {
+      "hosting": {
+        "My-first-app": [
+          "ankur-renting"
+        ]
+      }
+    }
+  }
+}

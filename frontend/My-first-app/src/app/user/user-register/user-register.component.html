@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="col-6 m-auto">
+        <div class="card m-auto">
+            <div class="card-header">
+               <h3> Register </h3>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group col-12">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" formControlName="userName">
+                        <span *ngIf="!userName.valid && (userName.touched || userSubmitted) " class="text-danger">Please provide the
+                            Name</span>
+                    </div>
+
+                    <div class="form-group col-12">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="text" class="form-control" formControlName="email">
+                        <span *ngIf="!email.valid && (email.touched || userSubmitted) " class="text-danger">
+                            <span *ngIf="email.hasError('required')">Please provide the Email</span>
+                            <span *ngIf="email.hasError('email')">Please provide the valid Email</span>
+                        </span>
+                    </div>
+
+                    <div class="form-group col-12">
+                        <label for="passwrod" class="form-label">Password</label>
+                        <input type="text" class="form-control" formControlName="password">
+                        <span *ngIf="!password.valid && (password.touched || userSubmitted) " class="text-danger">
+                            <span *ngIf="password.hasError('required')">Please provide the Password</span>
+                            <span *ngIf="password.hasError('minlength')">Please enter upto 8 character</span>
+                        </span>
+                    </div>
+
+                    <div class="form-group col-12">
+                        <label for="cpassword" class="form-label">Confirm Password</label>
+                        <input type="text" class="form-control" formControlName="confirmPassword">
+                        <span *ngIf="!confirmPassword.valid && (confirmPassword.touched || userSubmitted) " class="text-danger">
+                            <span *ngIf="confirmPassword.hasError('required')">Please Provide the confirm
+                                password</span></span>
+                        <span class="text-danger" *ngIf="registrationForm.hasError('notmatched') && confirmPassword.valid">Password does not
+                            match</span>
+
+                    </div>
+
+                    <div class="form-group col-12">
+                        <label for="mobile" class="form-label">Mobile</label>
+                        <input type="text" class="form-control" formControlName="mobile">
+                        <span class="text-danger" *ngIf="!mobile.valid && (mobile.touched || userSubmitted) "> 
+                            <span *ngIf="mobile.hasError('required')">Enter the mobile number</span> 
+                            <span *ngIf="mobile.hasError('minlength') || mobile.hasError('maxlength')">Please enter Ten digit</span>
+                        </span>
+                    </div>
+
+                    <div class="form-group col-12">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="reset" class="btn btn-secondary m-2">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

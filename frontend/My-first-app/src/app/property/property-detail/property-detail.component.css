@@ -1,0 +1,19 @@
+.card {
+    min-height: 300px;
+  }
+  
+  .card img {
+    padding: 10px;
+    height: 250px;
+  }
+  
+  .card-img-wrapper {
+    height: 250px;
+  }
+
+  .card title
+  {
+    color:hsl(180, 25%, 25%);
+  }
+
+  .ngx-gallery { display: inline-block; margin-bottom: 20px; }
